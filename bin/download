@@ -16,7 +16,7 @@ release_file="$ASDF_DOWNLOAD_PATH/app-$ASDF_INSTALL_VERSION.zip"
 download_release "$ASDF_INSTALL_VERSION" "$release_file"
 
 #  Extract contents of distribution file into the download directory
-extract_release "$ASDF_INSTALL_VERSION" ""$release_file" || fail "Could not extract $release_file"
+extract_release "$ASDF_INSTALL_VERSION" "$release_file" || fail "Could not extract $release_file"
 
 # Remove the distribution file since we don't need to keep it
 rm "$release_file"
